@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class RandomNumbers {
-
+/*TODO Review - pls remove statics*/
     public static int lotteryMachine ()
     {
         Random random = new Random();

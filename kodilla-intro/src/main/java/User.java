@@ -28,7 +28,7 @@ public class User {
             i++;
         }
 
-        return (double) (sumOfAge / user.length);
+        return sumOfAge / user.length;//simplified
     }
 
     public static void main (String[] args)
@@ -43,7 +43,8 @@ public class User {
 
         for (int i = 0; i < user.length; i++)
         {
-            if ((double)(user[i].age) < average(user))
+            if ((double)(user[i].age) < average(user)) /*TODO: Review kdrzazga - 1.casting not needed
+            2. no need to calculate average every time in the loop*/
             {
                 System.out.println(user[i].name);
             }
