@@ -3,23 +3,20 @@ public class User {
     private String name;
     private int age;
 
-    public User (String name, int age)
-    {
+    public User(String name, int age) {
         this.name = name;
         this.age = age;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return name;
     }
 
-    public int getAge()
-    {
+    public int getAge() {
         return age;
     }
 
-    public static double average (User[] user) {
+    public static double average(User[] user) {
         int i = 0;
         int sumOfAge = 0;
 
@@ -31,8 +28,7 @@ public class User {
         return sumOfAge / user.length;//simplified
     }
 
-    public static void main (String[] args)
-    {
+    public static void main(String[] args) {
         User[] user = new User[5];
 
         user[0] = new User("Toamsz", 25);
@@ -41,10 +37,10 @@ public class User {
         user[3] = new User("Aleksandra", 56);
         user[4] = new User("Barbara", 72);
 
-        for (int i = 0; i < user.length; i++)
-        {
-            if ((double)(user[i].age) < average(user)) /*TODO: Review kdrzazga - 1.casting not needed
-            2. no need to calculate average every time in the loop*/
+        double average = average(user);
+
+        for (int i = 0; i < user.length; i++) {
+            if (user[i].age < average)
             {
                 System.out.println(user[i].name);
             }

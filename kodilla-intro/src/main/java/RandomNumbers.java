@@ -1,22 +1,20 @@
 import java.util.Random;
 
 public class RandomNumbers {
-/*TODO Review - pls remove statics*/
-    public static int lotteryMachine ()
+    public int lotteryMachine ()
     {
         Random random = new Random();
-        int result = random.nextInt(31);
-        return result;
+        return random.nextInt(31);
     }
 
-    public static int min (int min, int minNew)
+    public int min (int min, int minNew)
     {
         if (minNew < min)
             min = minNew;
         return min;
     }
 
-    public static int max (int max, int maxNew)
+    public int max (int max, int maxNew)
     {
         if(maxNew > max)
             max = maxNew;
@@ -25,15 +23,17 @@ public class RandomNumbers {
 
     public static void main (String[] args)
     {
+        RandomNumbers random = new RandomNumbers();
+
         int min = 0;
         int max = 0;
         int sum = 0;
 
         while (sum <= 5000)
         {
-            sum += lotteryMachine();
-            min = min(min, lotteryMachine());
-            max = max(max, lotteryMachine());
+            sum += random.lotteryMachine();
+            min = random.min(min, random.lotteryMachine());
+            max = random.max(max, random.lotteryMachine());
         }
 
         System.out.println(min + "\n" + max + "\n" + sum);
