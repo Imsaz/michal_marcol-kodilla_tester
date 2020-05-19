@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class colorChoice {/*TODO Review: Class names should start with capital letter */
+public class ColorChoice {
 
     public static String getFirstLetter() {
         Scanner scanner = new Scanner(System.in);
