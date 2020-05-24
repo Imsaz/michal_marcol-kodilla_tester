@@ -1,4 +1,4 @@
-package com.kodilla.abstracts.homework;
+package com.kodilla.exercises.homework;
 
 public class Rectangle extends Shape {
     public Rectangle(int a, int b) {

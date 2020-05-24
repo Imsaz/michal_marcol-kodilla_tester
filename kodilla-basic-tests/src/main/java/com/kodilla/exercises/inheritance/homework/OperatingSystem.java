@@ -1,4 +1,4 @@
-package com.kodilla.inheritance.homework;
+package com.kodilla.exercises.inheritance.homework;
 
 public class OperatingSystem {
 
