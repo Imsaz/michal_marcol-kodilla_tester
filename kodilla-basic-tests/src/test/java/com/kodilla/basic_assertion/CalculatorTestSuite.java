@@ -2,7 +2,7 @@ package com.kodilla.basic_assertion;
 
 import org.junit.jupiter.api.Test;
 
-import static com.kodilla.basic_assertion.ResultChecker.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTestSuite {
 
@@ -12,6 +12,6 @@ public class CalculatorTestSuite {
         int a = 5;
         int b = 8;
         int sumResult = calculator.sum(a,b);
-        assertEquals(14, sumResult);
+        assertEquals(13, sumResult);
     }
 }

@@ -12,7 +12,7 @@ public class Calculator {
         return a - b;
     }
 
-    public int exp (int a)
+    public int power2(int a)
     {
         return a*a;
     }
