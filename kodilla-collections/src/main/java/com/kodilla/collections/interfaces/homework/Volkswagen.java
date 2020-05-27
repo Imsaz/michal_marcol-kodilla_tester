@@ -4,8 +4,16 @@ public class Volkswagen implements Car {
 
     private int speed;
 
-    public Volkswagen() {
+    public Volkswagen () {
         speed = 0;
+    }
+
+    public String getName() {
+        return "Volkswagen";
+    }
+
+    public Volkswagen(int speed) {
+        this.speed = speed;
     }
 
     @Override
