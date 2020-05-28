@@ -1,5 +1,6 @@
 package com.kodilla.collections.sets.homework;
 
+/*TODO Review kdrzazga Redundant import & error - cannot run the app*/
 import com.kodilla.collections.sets.Order;
 
 import java.util.HashSet;
