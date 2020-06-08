@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+//TODO
+//compileJava.options.fork = true
+//compileJava.options.forkOptions.executable = "C:/Program Files/Java/jdk-11.0.7/bin"
+
+group 'com.kodilla'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
