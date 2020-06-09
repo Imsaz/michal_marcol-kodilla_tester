@@ -1,5 +1,7 @@
 package com.kodilla.collections.adv.immutable;
 
+//TODO
+
 public class BookHacked extends Book{
     public BookHacked(String author, String title) {
         super(author, title);
