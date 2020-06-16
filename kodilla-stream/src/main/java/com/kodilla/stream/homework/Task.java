@@ -16,7 +16,7 @@ public class Task {
 
     public String getName() {
         return name;
-    }
+    }/*TODO: Review - method not used*/
 
     @Override
     public String toString() {
@@ -29,7 +29,7 @@ public class Task {
 
     public LocalDate getOpened() {
         return opened;
-    }
+    }/*TODO: method not used*/
 
     public LocalDate getDeadline() {
         return deadline;
