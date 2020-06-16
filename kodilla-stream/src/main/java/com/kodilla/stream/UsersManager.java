@@ -7,8 +7,8 @@ public class UsersManager {
     public static void main(String[] args) {
         List<String> usernames = UsersRepository.getUsersLists()
                 .stream()
-                .filter(u -> u.getGroup().equals("Chemists"))
-                .map(UsersManager::getUserName)
+                .filter(u -> u.getGroup().equals("Chemists")) //this line returns a stream of users, that belong to particular group
+                .map( ::getUserName)/*TODO: Here do the following mapping: for each user -> call static method getUserName from this class*/
                 .collect(Collectors.toList());
         System.out.println(usernames);
     }
