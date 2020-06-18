@@ -14,10 +14,6 @@ public class Task {
         this.deadline = deadline;
     }
 
-    public String getName() {
-        return name;
-    }/*TODO: Review - method not used*/
-
     @Override
     public String toString() {
         return "Task{" +
@@ -26,10 +22,6 @@ public class Task {
                 ", deadline=" + deadline +
                 '}';
     }
-
-    public LocalDate getOpened() {
-        return opened;
-    }/*TODO: method not used*/
 
     public LocalDate getDeadline() {
         return deadline;
