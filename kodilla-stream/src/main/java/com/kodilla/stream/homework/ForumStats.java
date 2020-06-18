@@ -23,4 +23,6 @@ public class ForumStats {
 
         //UsersRepository.getUsersLists().
     }
+
+    private static
 }
