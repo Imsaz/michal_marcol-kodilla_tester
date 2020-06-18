@@ -13,7 +13,9 @@ public class WarehouseApp {
         warehouse.addOrder(order3);
 
         try {
-            warehouse.getOrder("33").forEach(o -> System.out.println(o));
+            System.out.println(warehouse.getOrder("333"));
+            System.out.println(warehouse.getOrder("1"));
+            System.out.println(warehouse.getOrder(" "));
         } catch (OrderDoesntExistException e) {
             e.printStackTrace();
         }
