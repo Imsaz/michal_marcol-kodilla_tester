@@ -2,6 +2,7 @@ package com.kodilla.exception.homework;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Warehouse {
     private static List<Order> listOfOrder = new ArrayList<>();
@@ -11,14 +12,15 @@ public class Warehouse {
     }
 
     public Order getOrder(String number) throws OrderDoesntExistException {
-        var orders = listOfOrder.stream()
-                .map(Order::getNumber)
-                .filter(num -> num.equals(number))
-                .findAny();
+        var orders = listOfOrder
+                .stream()
+                .filter(num -> num.getNumber().equals(number))
+                .collect(Collectors.toList());
+
         if (orders.isEmpty())
             throw new OrderDoesntExistException();
         else
-            return getOrderbyNumber(orders.get());
+            return getOrderbyNumber(number);
     }
 
     private static Order getOrderbyNumber (String number){
