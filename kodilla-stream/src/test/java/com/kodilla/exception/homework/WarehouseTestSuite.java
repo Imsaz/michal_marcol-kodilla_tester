@@ -1,9 +1,8 @@
 package com.kodilla.exception.homework;
 
-import com.kodilla.exception.AirportNotFoundException;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 public class WarehouseTestSuite {
 
@@ -25,7 +24,7 @@ public class WarehouseTestSuite {
         assertTrue(orderExist);
     }
 
-    @Test (expected = OrderDoesntExistException.class)
+    @Test(expected = OrderDoesntExistException.class)
     public void testGetOrder_WithExemption() throws OrderDoesntExistException {
         // given
         Warehouse warehouse = new Warehouse();
