@@ -18,4 +18,5 @@ public class NotificationWeatherServiceTestSuite {
         assertEquals(1, notificationWeatherService.sizeOfMap());
     }
 
+
 }

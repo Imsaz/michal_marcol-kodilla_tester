@@ -35,11 +35,12 @@ public class NotificationWeatherService {
 
     public void removeSubscribe( Destination destination, ClientOfWService client){
         if(dataBase.containsKey(destination)){
-            for(Set<ClientOfWService> list: dataBase.values()){
+            dataBase.get(destination).remove(client);
+            /*for(Set<ClientOfWService> list: dataBase.values()){
                 if(list.contains(client)){
                     list.remove(client);
                 }
-            }
+            }*/
         }
     }
 
