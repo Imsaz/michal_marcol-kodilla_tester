@@ -1,8 +1,5 @@
 package com.kodilla.mockito.homework;
 
-import com.kodilla.mockito.Client;
-import com.kodilla.mockito.Notification;
-
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -61,5 +58,9 @@ public class NotificationWeatherService {
 
     public int sizeOfMap(){
         return this.dataBase.size();
+    }
+
+    public int sizeOfSet(Destination destination){
+        return this.dataBase.get(destination).size();
     }
 }
