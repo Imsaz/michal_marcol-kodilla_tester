@@ -10,12 +10,14 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 class ClockTestSuite {
 
     @Test
-    public void shouldCreateDifferentTime() {
+    public void shouldCreateDifferentTime() throws InterruptedException{
         ApplicationContext context = new AnnotationConfigApplicationContext("com.kodilla.spring");
         Clock firstTime = context.getBean(Clock.class);
         firstTime.time();
+        Thread.sleep(1000);
         Clock secondTime = context.getBean(Clock.class);
         secondTime.time();
+        Thread.sleep(1000);
         Clock thirdTime = context.getBean(Clock.class);
         thirdTime.time();
         Assertions.assertFalse(firstTime.returnTime().equals(secondTime.returnTime()));
