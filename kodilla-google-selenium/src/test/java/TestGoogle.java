@@ -28,5 +28,6 @@ public class TestGoogle {
         System.out.println(driver);
         WebDriverWait wait = new WebDriverWait(driver, 10);
         googleSearch.searchResults();
+        // Wybrany element z listy porownujemy po nazwie z otwartym elementem przez link
     }
 }
