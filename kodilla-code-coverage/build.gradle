@@ -1,0 +1,55 @@
+plugins {
+    id 'java'
+    id 'jacoco'
+    id "com.github.spotbugs" version "3.0.0"
+}
+
+group 'com.kodilla'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+spotbugs {
+    toolVersion = '3.1.12'
+    ignoreFailures = true
+}
+
+spotbugsMain {
+    reports.html.enabled = true
+    reports.xml.enabled = false
+}
+
+spotbugsTest {
+    reports.html.enabled = true
+    reports.xml.enabled = false
+}
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            element = 'METHOD'
+            limit {
+                counter = 'LINE'
+                value = 'COVEREDRATIO'
+                minimum = 1.0
+            }
+
+            limit {
+                counter = 'branch'
+                value = 'COVEREDRATIO'
+                minimum = 1.0
+            }
+            includes = [
+                    'com.kodilla.jacoco.*'
+            ]
+        }
+    }
+}
+
+
